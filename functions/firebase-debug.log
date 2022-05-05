@@ -1,0 +1,59 @@
+[debug] [2022-05-05T06:53:33.659Z] ----------------------------------------------------------------------
+[debug] [2022-05-05T06:53:33.661Z] Command:       /Users/aliyome/.volta/tools/image/node/16.14.2/bin/node /Users/aliyome/.volta/tools/image/packages/firebase-tools/bin/firebase deploy
+[debug] [2022-05-05T06:53:33.661Z] CLI Version:   10.7.1
+[debug] [2022-05-05T06:53:33.661Z] Platform:      darwin
+[debug] [2022-05-05T06:53:33.661Z] Node Version:  v16.14.2
+[debug] [2022-05-05T06:53:33.662Z] Time:          Thu May 05 2022 15:53:33 GMT+0900 (日本標準時)
+[debug] [2022-05-05T06:53:33.662Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-05-05T06:53:33.705Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-05-05T06:53:33.705Z] > authorizing via signed-in user (aliyome@gmail.com)
+[debug] [2022-05-05T06:53:33.706Z] [iam] checking project robots-monitor for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-05-05T06:53:33.707Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/robots-monitor:testIamPermissions [none]
+[debug] [2022-05-05T06:53:33.707Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/robots-monitor:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-05-05T06:53:34.492Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/robots-monitor:testIamPermissions 200
+[debug] [2022-05-05T06:53:34.492Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/robots-monitor:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-05-05T06:53:34.493Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/robots-monitor/serviceAccounts/robots-monitor@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2022-05-05T06:53:34.493Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/robots-monitor/serviceAccounts/robots-monitor@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2022-05-05T06:53:35.293Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/robots-monitor/serviceAccounts/robots-monitor@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2022-05-05T06:53:35.293Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/robots-monitor/serviceAccounts/robots-monitor@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2022-05-05T06:53:35.294Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/robots-monitor [none]
+[debug] [2022-05-05T06:53:35.702Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/robots-monitor 200
+[debug] [2022-05-05T06:53:35.702Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/robots-monitor {"projectId":"robots-monitor","projectNumber":"14980765314","displayName":"robots-monitor","name":"projects/robots-monitor","resources":{"hostingSite":"robots-monitor","storageBucket":"robots-monitor.appspot.com","locationId":"asia-northeast2"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'robots-monitor'...
+[info] 
+[info] i  deploying firestore, functions, hosting 
+[info] i  firestore: reading indexes from firestore.indexes.json... 
+[info] i  cloud.firestore: checking firestore.rules for compilation errors... 
+[debug] [2022-05-05T06:53:35.709Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/robots-monitor:test [none]
+[debug] [2022-05-05T06:53:35.709Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/robots-monitor:test [omitted]
+[debug] [2022-05-05T06:53:36.837Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/robots-monitor:test 200
+[debug] [2022-05-05T06:53:36.837Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/robots-monitor:test {}
+[info] ✔  cloud.firestore: rules file firestore.rules compiled successfully 
+[debug] [2022-05-05T06:53:36.839Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/robots-monitor [none]
+[debug] [2022-05-05T06:53:37.206Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/robots-monitor 200
+[debug] [2022-05-05T06:53:37.206Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/robots-monitor {"projectId":"robots-monitor","projectNumber":"14980765314","displayName":"robots-monitor","name":"projects/robots-monitor","resources":{"hostingSite":"robots-monitor","storageBucket":"robots-monitor.appspot.com","locationId":"asia-northeast2"},"state":"ACTIVE"}
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2022-05-05T06:53:37.208Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/robots-monitor/services/cloudfunctions.googleapis.com [none]
+[debug] [2022-05-05T06:53:37.209Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/robots-monitor/services/runtimeconfig.googleapis.com [none]
+[debug] [2022-05-05T06:53:37.210Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/robots-monitor/services/cloudbuild.googleapis.com [none]
+[debug] [2022-05-05T06:53:37.211Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/robots-monitor/services/artifactregistry.googleapis.com [none]
+[debug] [2022-05-05T06:53:38.295Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/robots-monitor/services/runtimeconfig.googleapis.com 200
+[debug] [2022-05-05T06:53:38.295Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/robots-monitor/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2022-05-05T06:53:38.333Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/robots-monitor/services/cloudfunctions.googleapis.com 200
+[debug] [2022-05-05T06:53:38.333Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/robots-monitor/services/cloudfunctions.googleapis.com [omitted]
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2022-05-05T06:53:38.492Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/robots-monitor/services/artifactregistry.googleapis.com 200
+[debug] [2022-05-05T06:53:38.492Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/robots-monitor/services/artifactregistry.googleapis.com [omitted]
+[debug] [2022-05-05T06:53:38.494Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/robots-monitor/services/cloudbuild.googleapis.com 200
+[debug] [2022-05-05T06:53:38.494Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/robots-monitor/services/cloudbuild.googleapis.com [omitted]
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2022-05-05T06:53:38.494Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/robots-monitor/adminSdkConfig [none]
+[debug] [2022-05-05T06:53:38.884Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/robots-monitor/adminSdkConfig 200
+[debug] [2022-05-05T06:53:38.884Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/robots-monitor/adminSdkConfig {"projectId":"robots-monitor","storageBucket":"robots-monitor.appspot.com","locationId":"asia-northeast2"}
+[debug] [2022-05-05T06:53:38.885Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/robots-monitor/configs [none]
+[debug] [2022-05-05T06:53:40.110Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/robots-monitor/configs 200
+[debug] [2022-05-05T06:53:40.110Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/robots-monitor/configs {}
+[info] i  functions: preparing codebase default for deployment 
